@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Monda:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Londrina+Sketch&family=Monda:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <script src="/index.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="bg">    
+<div class="nav">
+    <div class="navimg">
+        <img src="/src/logo.jpg" alt="">
+    </div>
+
+    <div class="navbar"> 
+    <ul>
+        <li> <a href="#menu"> MENU</a></li>
+        <li><a href="#recepit">RECEPIT</a></li>
+        <li><a href="#payment">PAYMENT</a> </li>
+    </ul>
+    </div> 
+</div>
+
+<div class="menu">
+    <h1 id="hs" >Menu</h1>
+
+
+    <div class="menus">
+
+        <div id="f1">
+            <img src="src/idlyy.jpg" alt="">
+            <p>Idly&emsp;<span class="i">20$</span></p>
+            
+            <input class="ia" id="vid" type="number" min="0" max="5">
+            <button  onclick="fun(this)">Order</button>
+        </div>
+
+        <div id="f2">
+            <img src="/src/vada.jpg" alt="">
+            <p>Vada&emsp;<span class="i">30$</span></p>
+
+            <input class="ia" id="vvd" type="number" min="1" max="5">
+            <button onclick="fun(this)">Order</button>
+        </div>
+
+        <div id="f3">
+            <img class="ia" src="/src/dosaa.jpg" alt="">
+            <p>Dosa&emsp;<span class="i">45$</span></p>
+
+            <input id="vdo" type="number" min="1" max="5">
+            <button onclick="fun(this)" >Order</button>
+        </div>
+
+        <div id="f4">
+            <img src="/src/upma.jpg" alt="">
+            <p>Upma&emsp;<span class="i">25$</span></p>
+
+            <input id="vup" type="number" min="1" max="5">
+            <button onclick="fun(this)">Order</button>
+        </div>
+
+        <div id="fd5">
+            <img src="/src/coffe.webp" alt="">
+            <p>coffe&emsp;<span class="i">15$</span></p>
+            <input id="vcf" type="number" min="1" max="5">
+            <button onclick="fun(this)">Order</button>
+        </div>
+
+        <div id="fd6">
+            <img src="/src/tea.jpg" alt="">
+            <p>Tea&emsp;<span class="i">10$</span></p>
+            <input id="vte" type="number" min="1" max="5">
+            <button onclick="fun(this)">Order</button>
+        </div>
+
+        <div id="fd7">
+            <button onclick="fun(this)"><a href="#recepit">GET RECEPIT</a> </button>
+    
+    </div>
+</div>
+</div>
+<div id="recepit">
+    <h1>RECEPIT</h1>
+    <div id="recepit1">
+        <h2>Order List</h2>
+        <ul>
+            <li id="aaa">Idly : <span id="idly">0</span></li>
+            <li id="abb">Vada : <span id="vada">0</span></li>
+            <li>Dosa : <span id="dosa">0</span></li>
+            <li>Upma : <span id="upma">0</span></li>
+            <li>Coffee : <span id="coffe">0</span></li>
+            <li>Tea : <span id="tea">0</span></li>
+        </ul>
+        <p>Total : <span id="total"></span></p>
+    </div>
+    <div class="paybut">
+    <button><a href="#payment">Pay Online</a></button>
+    <button>Pay Cash</button>
+    <button>Print Receipt</button>
+    </div>
+</div>
+<div id="payment">
+    <h1>PAYMENT</h1>
+    <div class="pay">
+        <h2>Scan To Pay</h2>
+        <button onclick="pay(this)">GET QR</button><br>
+        <img id="qr" src="/src/qrimg.png" alt="">
+        <h2>Amount:<span id="amtqr">0</span></h2>
+    </div>
+</div>
+    <script>
+        imgqr=document.getElementById('qr');
+        function pay(qr){
+            console.log(total.innerHTML)
+            if(total.innerHTML=='' || total.innerHTML=='0$'  ){
+                alert('No items ordered');
+            }
+            else{
+                
+            imgqr.style.visibility='Visible';
+            // qr==imgqr? imgqr.style.visibility='Visible':imgqr.style.visibility='';
+            amountqr=document.getElementById('amtqr');
+            amountqr.innerHTML=total.innerHTML;
+        }
+    }
+    </script>
+</body>
+</html>
