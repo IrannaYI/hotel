@@ -47,7 +47,7 @@
 
 /* menu */
 .bg{
-    background-image: url('src/bg-1.jpg');
+    background-image: url('main/src/bg-1.jpg');
     height: 100vh;
     width: 100%;
     background-position: center;
